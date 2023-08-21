@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyStudyInfoBuddy</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="../custom-scripts.js" defer></script>
+</head>
+
+<style>
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .heading {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        top: 10%;
+
+        color: #fff;
+
+    }
+
+    .item-container {
+        /* height: 100vh; */
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        color: #fff;
+    }
+
+    .left {
+        height: 60vh;
+        width: 40%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        border-radius: 30px;
+    }
+
+    .right {
+        height: 60vh;
+        width: 40%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        border-radius: 30px;
+    }
+
+    .img {
+        width: 40%;
+    }
+
+    @media screen and (max-width: 768px) {
+        .item-container {
+            flex-direction: column;
+        }
+
+        .left {
+            width: 80%;
+            height: 50%;
+        }
+
+        .right {
+            width: 80%;
+            height: 50%;
+        }
+
+        .heading {
+            display: none;
+        }
+
+        .img {
+            width: 20%;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .img {
+            width: 50%;
+        }
+
+        .tittle {
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .tittle {
+            font-size: 10px;
+        }
+    }
+</style>
+
+<body onload="showAlertWithDelay()">
+    <main>
+        <!-- Header Start -->
+        <header>
+            <nav class="nav container">
+                <h2 class="nav_logo"><a href="#">MyStudyInfoBuddy</a></h2>
+
+                <ul class="menu_items">
+                    <img src="images/times.svg" alt="timesicon" id="menu_toggle" />
+                    <li><a href="#" class="nav_link">Home</a></li>
+                    <li><a href="#" class="nav_link">Syllabus</a></li>
+                    <li><a href="#" class="nav_link">Routin</a></li>
+                    <li><a href="#" class="nav_link">Prev.Question papers</a></li>
+                </ul>
+                <img src="images/bars.svg" alt="timesicon" id="menu_toggle" />
+            </nav>
+        </header>
+        <!-- Header End -->
+
+        <div class="heading">
+            <h2>Choose your course</h2>
+        </div>
+
+
+        <section class="item-container hero">
+            <div class="left">
+                <a href="" class="content">
+                    <img src="/images/plustwo.png" alt="" class="img"><br>
+                    <h3 class="tittle">Plus two / Higher secondary education</h3>
+                </a>
+            </div>
+            <br>
+            <div class="right">
+                <a href="" class="content">
+                    <img src="/images/graduation.png" alt="" class="img"><br>
+                    <h3 class="tittle">Plus three / Gratuation</h3>
+                </a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <script>
+        const header = document.querySelector("header");
+        const menuToggler = document.querySelectorAll("#menu_toggle");
+
+        menuToggler.forEach(toggler => {
+            toggler.addEventListener("click", () => header.classList.toggle("showMenu"));
+        });
+    </script>
+    <!-- 
+    <script>
+        // Function to display the alert after a delay
+        function showAlertWithDelay() {
+            setTimeout(function () {
+                alert("Welcome to our website! Thank you for visiting.");
+            }, 1000); // 3000 milliseconds (3 seconds) delay
+        }
+    </script> -->
+</body>
+
+</html>
